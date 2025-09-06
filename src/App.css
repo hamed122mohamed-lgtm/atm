@@ -1,42 +1,81 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+  background: linear-gradient(135deg, #f0f8ff, #e6f0fa);
+}
+
+.atm-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.atm-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #1e40af;
+  margin-bottom: 20px;
+}
+
+.atm-input {
+  width: 260px;
+  padding: 12px;
+  margin-bottom: 20px;
   text-align: center;
+  font-size: 1rem;
+  border: 2px solid #93c5fd;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.3s ease-in-out;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.atm-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0px 0px 6px rgba(37, 99, 235, 0.5);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.atm-button {
+  background-color: #2563eb;
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.atm-button:hover {
+  background-color: #1e3a8a;
 }
 
-.card {
-  padding: 2em;
+.result-box {
+  margin-top: 30px;
+  width: 280px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
-.read-the-docs {
-  color: #888;
+.result-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #374151;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  padding: 6px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.result-item:last-child {
+  border-bottom: none;
 }
